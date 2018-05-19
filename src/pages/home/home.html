@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Geofences</h2>
+
+  <ion-list>
+    <button ion-item *ngFor="let fence of fences.data" (click)="go(this.fence.id)">
+      <h3>{{fence.title}}</h3>
+      <p>{{fence.geofence.latitude}}, {{fence.geofence.longitude}}</p>
+    </button>
+  </ion-list>
+
+  <div>
+    <button ion-button block (click)="showAll()">Show All Points Map</button>
+  </div>
+
+  <!--<geofence-list></geofence-list>-->
+
+</ion-content>
